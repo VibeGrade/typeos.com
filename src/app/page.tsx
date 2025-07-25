@@ -40,7 +40,7 @@ export default function Home() {
         {/* Main Heading */}
         <section className="max-w-4xl mx-auto mb-12 md:mb-16">
           <h1 className="heading text-center italic">
-            We're building a better way to learn with<br />
+            We're building better ways to learn with<br />
             <a
               href="https://vibelearn.com/"
               target="_blank"
