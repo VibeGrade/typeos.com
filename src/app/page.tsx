@@ -34,23 +34,23 @@ export default function Home() {
         {/* Main Heading */}
         <section className="max-w-4xl mx-auto mb-12 md:mb-16">
           <h1 className="heading text-center italic">
-            We're building better ways to use the internet with{' '}
+            We're building a better way to learn with {' '}
             <a
-              href="https://diabrowser.com/"
+              href="https://vibelearn.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="heading-link"
             >
-              Dia
+              VibeLearn
             </a>
             {' '}and{' '}
             <a
-              href="https://arc.net/"
+              href="https://vibegrade.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="heading-link"
             >
-              Arc
+              VibeGrade
             </a>
             .
           </h1>
