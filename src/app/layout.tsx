@@ -27,19 +27,26 @@ export const metadata: Metadata = {
     description: "We're building a better way to learn with VibeLearn and VibeGrade",
     images: [
       {
-        url: "/share.svg",
+        url: "/share.png",
         width: 1200,
         height: 630,
         alt: "The TypeOS Company",
+        type: "image/png",
       },
     ],
     type: "website",
+    siteName: "The TypeOS Company",
   },
   twitter: {
     card: "summary_large_image",
     title: "The TypeOS Company | Building VibeLearn",
     description: "We're building a better way to learn with VibeLearn and VibeGrade",
-    images: ["/share.svg"],
+    images: [
+      {
+        url: "/share.png",
+        alt: "The TypeOS Company",
+      },
+    ],
   },
 };
 
