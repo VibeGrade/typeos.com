@@ -1,0 +1,33 @@
+# The TypeOS Company
+
+## About
+The TypeOS Company - We're building a better way to learn with VibeLearn and VibeGrade.
+
+## Products
+
+### VibeLearn
+The Future of Writing is Here. Work with AI directly in your Google Docs.
+- Website: https://vibelearn.com/
+- Join Waitlist: https://vibelearn.com/waitlist
+
+### VibeGrade
+AI-powered grading and assessment platform for educators.
+- Website: https://vibegrade.com/
+
+## Company Information
+- Name: The TypeOS Company
+- Location: San Francisco (SF)
+- Website: https://typeoscompany.com
+- Twitter/X: @typeoscompany (https://x.com/typeoscompany)
+
+## Current Status
+TypeOS Preview - Currently in development phase with products in beta/waitlist stage.
+
+## Contact & Links
+- Company Values: /values
+- Careers: /careers
+- Waitlist: https://vibelearn.com/waitlist
+- Social Media: @typeoscompany on X/Twitter
+
+## Description
+The TypeOS Company is building innovative AI-powered tools for education and productivity, focusing on seamless integration with popular platforms like Google Docs to revolutionize how people write, learn, and collaborate.

@@ -118,7 +118,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="mono-link"
             >
-              @typeos
+              @typeoscompany
             </a>
           </nav>
         </footer>
@@ -131,12 +131,12 @@ export default function Home() {
             <div className="online-dot" />
             <span className="mono text-sm">69 Online</span>
           </div>
-          <button
+          {/* <button
             onClick={() => setShowOnlineCount(!showOnlineCount)}
             className="mono-link text-sm opacity-50 hover:opacity-100"
           >
             {showOnlineCount ? 'Hide' : 'Show'}
-          </button>
+          </button> */}
         </div>
         <div className="text-sm flex items-center gap-3">
           <div className="theme-dot" />
