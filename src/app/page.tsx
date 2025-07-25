@@ -90,8 +90,11 @@ export default function Home() {
               <Image
                 src="/white-vibe-smile.png"
                 alt=""
+                width={14}
+                height={14}
+                className="w-3.5 h-3.5 invert"
               />
-              Arc Browser
+              VibeGrade
             </a>
           </div>
         </section>
