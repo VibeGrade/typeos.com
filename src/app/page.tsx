@@ -21,15 +21,15 @@ export default function Home() {
         <header className="mb-12 md:mb-16">
           <div className="w-24 h-24 md:w-32 md:h-32 mx-auto">
             <Image
-              src="https://ext.same-assets.com/808577167/2899468770.svg"
-              alt="The Browser Company"
+              src="/typeos.png"
+              alt="TypeOS"
               width={128}
               height={128}
               className="w-full h-full object-contain md:hidden"
             />
             <Image
-              src="https://ext.same-assets.com/808577167/4192365745.svg"
-              alt="The Browser Company"
+              src="/typeos.png"
+              alt="TypeOS"
               width={128}
               height={128}
               className="w-full h-full object-contain hidden md:block"
@@ -140,7 +140,7 @@ export default function Home() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-3">
             <div className="online-dot" />
-            <span className="mono text-sm">68 Online</span>
+            <span className="mono text-sm">69 Online</span>
           </div>
           <button
             onClick={() => setShowOnlineCount(!showOnlineCount)}
@@ -160,7 +160,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-3">
             <div className="online-dot" />
-            <span className="mono text-sm">68 Online</span>
+            <span className="mono text-sm">69 Online</span>
             <button
               onClick={() => setShowOnlineCount(!showOnlineCount)}
               className="mono-link text-sm opacity-50 hover:opacity-100"
