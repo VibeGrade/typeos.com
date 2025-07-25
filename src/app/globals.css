@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mono:wght@400;500&display=swap');
+
+@font-face {
+    font-display: swap;
+    font-family: ABCDiatypeMono;
+    font-style: normal;
+    font-weight: 400;
+    src:
+        url(https://www.thebrowser.company/values/fonts/ABCDiatypeMono-Regular.woff2) format("woff2"),
+        url(https://www.thebrowser.company/values/fonts/ABCDiatypeMono-Regular.woff) format("woff"),
+        url(https://www.thebrowser.company/values/fonts/ABCDiatypeMono-Regular.otf) format("opentype");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +20,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#ecece4] text-[#272725] font-sans min-h-screen;
+    @apply bg-[#EDEEE7] text-[#222222] font-sans min-h-screen transition-colors duration-300;
+  }
+  
+  body.dark {
+    @apply bg-[#222222] text-[#EDEEE7];
   }
   html {
     font-family: system-ui, -apple-system, sans-serif;
@@ -19,23 +34,208 @@
 @layer components {
   .heading {
     font-family: 'EB Garamond', serif;
-    @apply text-4xl md:text-5xl lg:text-6xl font-normal leading-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-normal leading-tight;
   }
 
   .heading-link {
-    @apply underline decoration-2 underline-offset-4 hover:opacity-75 transition-opacity;
+    @apply underline decoration-2 underline-offset-4 hover:opacity-75 transition-all duration-300;
   }
 
   .button-link {
-    @apply inline-flex items-center gap-3 px-6 py-3 border border-[#272725] rounded-full text-sm font-medium hover:bg-[#272725] hover:text-[#ecece4] transition-all duration-200;
+    font-family: ABCDiatypeMono, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2.1px;
+    line-height: normal;
+    text-transform: uppercase;
+    align-items: center;
+    color: currentcolor;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    width: max-content;
+    transition: all 0.3s ease;
+  }
+  
+  .button-link:before {
+    border: 2px dotted transparent;
+    content: "";
+    inset: -5px;
+    pointer-events: none;
+    position: absolute;
+    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .button-link:active,
+  .button-link:hover {
+    outline: none;
+  }
+  
+  .button-link:active:before,
+  .button-link:hover:before {
+    border: 2px dotted;
+  }
+  
+  .button-link:focus-visible {
+    outline: none;
+  }
+  
+  .button-link:focus-visible:before {
+    border: 2px dotted;
+  }
+
+  .inherited-css {
+    font-family: Ivartext, Georgia, Times New Roman, serif;
+    line-height: 24px;
+    tab-size: 4;
+  }
+
+  .mono,
+  .mono-link {
+    font-family: ABCDiatypeMono, monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2.1px;
+    line-height: normal;
+    text-transform: uppercase;
   }
 
   .mono-link {
-    font-family: 'Mono', monospace;
-    @apply text-sm hover:opacity-75 transition-opacity;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .mono-link:before {
+    border: 2px dotted transparent;
+    content: "";
+    inset: -5px;
+    pointer-events: none;
+    position: absolute;
+    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mono-link:active,
+  .mono-link:hover {
+    outline: none;
+  }
+
+  .mono-link:active:before,
+  .mono-link:hover:before {
+    border: 2px dotted;
+  }
+
+  .mono-link:focus-visible {
+    outline: none;
+  }
+
+  .mono-link:focus-visible:before {
+    border: 2px dotted;
   }
 
   .online-dot {
-    @apply w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse;
+    @apply w-2.5 h-2.5 bg-blue-500 animate-pulse;
+  }
+  
+  body.dark .online-dot {
+    @apply bg-blue-400;
+  }
+  
+  .theme-dot {
+    @apply w-2.5 h-2.5 bg-[#222222] transition-colors duration-300;
+  }
+  
+  body.dark .theme-dot {
+    @apply bg-[#EDEEE7];
+  }
+}
+
+@layer utilities {
+  .gap-15 {
+    gap: 15px;
+  }
+  
+  .gap-12 {
+    gap: 12px;
+  }
+  
+  .h-10 {
+    height: 10px;
+  }
+  
+  .w-10 {
+    width: 10px;
+  }
+  
+  .bg-blue {
+    background-color: rgb(12, 80, 255);
+  }
+  
+  .text-current\/50 {
+    color: color-mix(in oklab, currentcolor, transparent 50%);
+  }
+  
+  .site-ease {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .-translate-y-1 {
+    translate: 0px -1px;
+  }
+
+  /* 800px breakpoint utilities */
+  @media (min-width: 800px) {
+    .\38 00\:items-start {
+      align-items: flex-start;
+    }
+    
+    .\38 00\:gap-y-10 {
+      row-gap: 10px;
+    }
+    
+    .\38 00\:fixed {
+      position: fixed;
+    }
+    
+    .\38 00\:top-20 {
+      top: 20px;
+    }
+    
+    .\38 00\:left-20 {
+      left: 20px;
+    }
+    
+    .\38 00\:z-2 {
+      z-index: 2;
+    }
+    
+    .\38 00\:ml-22 {
+      margin-left: 22px;
+    }
+    
+    .\38 00\:absolute {
+      position: absolute;
+    }
+    
+    .\38 00\:-left-12 {
+      left: -12px;
+    }
+    
+    .\38 00\:-translate-x-full {
+      translate: -100% 0;
+    }
+    
+    .\38 00\:top-1\/2 {
+      top: 50%;
+    }
+    
+    .\38 00\:-translate-y-1\/2 {
+      translate: 0 -50%;
+    }
   }
 }

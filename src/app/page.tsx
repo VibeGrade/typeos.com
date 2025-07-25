@@ -5,6 +5,12 @@ import Image from 'next/image';
 
 export default function Home() {
   const [showOnlineCount, setShowOnlineCount] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark');
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,7 +40,8 @@ export default function Home() {
         {/* Main Heading */}
         <section className="max-w-4xl mx-auto mb-12 md:mb-16">
           <h1 className="heading text-center italic">
-            We're building a better way to learn with {' '}
+            We're building a better way to learn<br />
+            with {' '}
             <a
               href="https://vibelearn.com/"
               target="_blank"
@@ -60,32 +67,29 @@ export default function Home() {
         <section className="mb-12 md:mb-16">
           <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center">
             <a
-              href="https://diabrowser.com/"
+              href="https://VibeLearn.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="button-link"
             >
               <Image
-                src="https://ext.same-assets.com/808577167/3124602396.svg"
+                src="/white-vibe-smile.png"
                 alt=""
                 width={14}
-                height={13}
-                className="w-3.5 h-3"
+                height={14}
+                className="w-3.5 h-3.5 invert"
               />
-              Dia Browser
+              VibeLearn
             </a>
             <a
-              href="https://arc.net/"
+              href="https://VibeGrade.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="button-link"
+              className="button-link inherited-css"
             >
               <Image
-                src="https://ext.same-assets.com/808577167/1900558864.svg"
+                src="/white-vibe-smile.png"
                 alt=""
-                width={18}
-                height={15}
-                className="w-4.5 h-3.5"
               />
               Arc Browser
             </a>
@@ -133,7 +137,7 @@ export default function Home() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-3">
             <div className="online-dot" />
-            <span className="mono-link text-sm">68 Online</span>
+            <span className="mono text-sm">68 Online</span>
           </div>
           <button
             onClick={() => setShowOnlineCount(!showOnlineCount)}
@@ -142,10 +146,10 @@ export default function Home() {
             {showOnlineCount ? 'Hide' : 'Show'}
           </button>
         </div>
-        <button className="mono-link text-sm flex items-center gap-3">
-          <div className="w-2.5 h-2.5 bg-[#272725] rounded-full" />
-          Theme
-        </button>
+        <div className="text-sm flex items-center gap-3">
+          <div className="theme-dot" />
+          <button className="mono-link" onClick={toggleTheme}>Theme</button>
+        </div>
       </div>
 
       {/* Mobile Status Elements */}
@@ -153,7 +157,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-3">
             <div className="online-dot" />
-            <span className="mono-link text-sm">68 Online</span>
+            <span className="mono text-sm">68 Online</span>
             <button
               onClick={() => setShowOnlineCount(!showOnlineCount)}
               className="mono-link text-sm opacity-50 hover:opacity-100"
@@ -161,10 +165,10 @@ export default function Home() {
               {showOnlineCount ? 'Hide' : 'Show'}
             </button>
           </div>
-          <button className="mono-link text-sm flex items-center gap-3">
-            <div className="w-2.5 h-2.5 bg-[#272725] rounded-full" />
-            Theme
-          </button>
+          <div className="text-sm flex items-center gap-3">
+            <div className="theme-dot" />
+            <button className="mono-link" onClick={toggleTheme}>Theme</button>
+          </div>
         </div>
       </div>
 
