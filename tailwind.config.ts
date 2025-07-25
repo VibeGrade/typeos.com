@@ -73,6 +73,12 @@ export default {
         '2xl': '1536px',
       },
       },
+      transitionTimingFunction: {
+        'site-ease': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      transitionDuration: {
+        '300': '300ms',
+      }
     }
   },
   plugins: [require("tailwindcss-animate")],

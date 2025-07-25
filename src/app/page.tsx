@@ -25,14 +25,14 @@ export default function Home() {
               alt="TypeOS"
               width={128}
               height={128}
-              className="w-full h-full object-contain md:hidden"
+              className="w-full h-full object-contain md:hidden logo-image"
             />
             <Image
               src="/typeos.png"
               alt="TypeOS"
               width={128}
               height={128}
-              className="w-full h-full object-contain hidden md:block"
+              className="w-full h-full object-contain hidden md:block logo-image"
             />
           </div>
         </header>
@@ -77,7 +77,7 @@ export default function Home() {
                 alt=""
                 width={14}
                 height={14}
-                className="w-3.5 h-3.5 invert"
+                className="w-3.5 h-3.5 invert vibe-smile-image"
               />
               VibeLearn
             </a>
@@ -92,7 +92,7 @@ export default function Home() {
                 alt=""
                 width={14}
                 height={14}
-                className="w-3.5 h-3.5 invert"
+                className="w-3.5 h-3.5 invert vibe-smile-image"
               />
               VibeGrade
             </a>
@@ -171,29 +171,6 @@ export default function Home() {
           <div className="text-sm flex items-center gap-3">
             <div className="theme-dot" />
             <button className="mono-link" onClick={toggleTheme}>Theme</button>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Branding */}
-      <div className="px-4 pb-4 md:fixed md:left-0 md:right-0 md:bottom-0 md:pb-5">
-        <div className="flex justify-between items-center opacity-50 max-w-6xl mx-auto">
-          <Image
-            src="https://ext.same-assets.com/808577167/2030264835.svg"
-            alt=""
-            width={24}
-            height={24}
-            className="w-6 h-6"
-          />
-          <Image
-            src="https://ext.same-assets.com/808577167/3737963061.svg"
-            alt=""
-            width={48}
-            height={24}
-            className="w-12 h-6"
-          />
-          <div className="hidden md:block">
-            <small className="sr-only">Copyright 2025 The Browser Company</small>
           </div>
         </div>
       </div>
