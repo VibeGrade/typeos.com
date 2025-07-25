@@ -99,16 +99,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Mobile Decorative Element */}
-        <div className="md:hidden mb-12">
-          <Image
-            src="https://ext.same-assets.com/808577167/2570943512.svg"
-            alt=""
-            width={200}
-            height={50}
-            className="mx-auto"
-          />
-        </div>
 
         {/* Footer Navigation */}
         <footer className="max-w-4xl mx-auto">
@@ -116,20 +106,20 @@ export default function Home() {
             <a href="/values" className="mono-link">Company Values</a>
             <a href="/careers" className="mono-link">Jobs</a>
             <a
-              href="https://browsercompany.substack.com/"
+              href="https://vibelearn.com/waitlist"
               target="_blank"
               rel="noopener noreferrer"
               className="mono-link"
             >
-              Newsletter
+              Waitlist
             </a>
             <a
-              href="https://x.com/browsercompany"
+              href="https://x.com/typeoscompany"
               target="_blank"
               rel="noopener noreferrer"
               className="mono-link"
             >
-              @browsercompany
+              @typeos
             </a>
           </nav>
         </footer>
