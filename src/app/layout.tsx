@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description: "We're building a better way to learn with VibeLearn and VibeGrade",
     images: [
       {
-        url: "/share.png",
+        url: "/twitter-image.png",
         alt: "The TypeOS Company",
       },
     ],
