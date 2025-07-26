@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://typeos.com"),
   title: "The TypeOS Company | Building VibeLearn",
   description: "We're building a better way to learn with VibeLearn and VibeGrade",
   icons: {
