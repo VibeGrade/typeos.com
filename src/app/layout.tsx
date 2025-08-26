@@ -14,38 +14,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://typeos.com"),
-  title: "The TypeOS Company | Building VibeLearn",
-  description: "We're building a better way to learn with VibeLearn and VibeGrade",
+  title: "TypeOS | Applied AI Research Lab",
+  description: "Work with AI directly in your Google Docs and Browser.",
   icons: {
     icon: "/typeos.png",
     shortcut: "/typeos.png",
     apple: "/typeos.png",
   },
   openGraph: {
-    title: "The TypeOS Company | Building VibeLearn",
-    description: "We're building a better way to learn with VibeLearn and VibeGrade",
+    title: "TypeOS | Applied AI Research Lab",
+    description: "Work with AI directly in your Google Docs and Browser.",
     images: [
       {
         url: "/share.png",
         width: 1200,
         height: 630,
-        alt: "The TypeOS Company",
+        alt: "TypeOS",
         type: "image/png",
       },
     ],
     type: "website",
-    siteName: "The TypeOS Company",
+    siteName: "TypeOS",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The TypeOS Company | Building VibeLearn",
-    description: "We're building a better way to learn with VibeLearn and VibeGrade",
+    title: "TypeOS | Applied AI Research Lab",
+    description: "Work with AI directly in your Google Docs and Browser.",
     images: [
       {
         url: "/twitter-image.png",
-        alt: "The TypeOS Company",
+        alt: "TypeOS",
       },
     ],
   },

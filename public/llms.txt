@@ -29,4 +29,4 @@ TypeOS Preview - Currently in development phase with products in beta/waitlist s
 - Social Media: @typeoscompany on X/TwitterI
 
 ## Description
-The TypeOS Company is building innovative AI-powered tools for education and productivity, focusing on seamless integration with popular platforms like Google Docs to revolutionize how people write, learn, and collaborate.
+TypeOS is building innovative AI-powered tools for education and productivity, focusing on seamless integration with popular platforms like Google Docs to revolutionize how people write, learn, and collaborate.
