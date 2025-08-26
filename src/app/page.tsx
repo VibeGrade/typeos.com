@@ -24,12 +24,18 @@ export default function Home() {
           </div>
           <div className="flex items-center space-x-4 opacity-0 animate-fade-in-up">
             <h1 className="text-7xl text-black font-bold">TypeOS</h1>
+            <p className="text-gray-600 text-lg max-w-xl">
+              The Future of Writing is Here. Work with AI directly in your Google Docs.
+            </p>
           </div>
         </div>
 
         <div className="opacity-0 animate-fade-in-up animate-delay-200">
-          <Button variant="silver">
-            Get TypeOS
+          <Button 
+            variant="silver"
+            onClick={() => window.open('https://chromewebstore.google.com/detail/vibelearn-ai-in-google-do/hikgnomhpklghakgjgecehpfodfmaanm', '_blank')}
+          >
+            Get VibeLearn
           </Button>
         </div>
         <div className="opacity-0 animate-fade-in-up animate-delay-400">
