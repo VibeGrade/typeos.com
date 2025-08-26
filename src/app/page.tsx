@@ -24,21 +24,23 @@ export default function Home() {
           </div>
           <div className="flex items-center space-x-4 opacity-0 animate-fade-in-up">
             <h1 className="text-7xl text-black font-bold">TypeOS</h1>
-            <p className="text-gray-600 text-lg max-w-xl">
-              The Future of Writing is Here. Work with AI directly in your Google Docs.
-            </p>
           </div>
         </div>
 
-        <div className="opacity-0 animate-fade-in-up animate-delay-200">
+        <p className="text-gray-600 text-lg max-w-xl text-center opacity-0 animate-fade-in-up animate-delay-200">
+          The Future of Writing is Here. Work with AI directly in your Google Docs.
+        </p>
+
+        <div className="opacity-0 animate-fade-in-up animate-delay-400">
           <Button 
             variant="silver"
             onClick={() => window.open('https://chromewebstore.google.com/detail/vibelearn-ai-in-google-do/hikgnomhpklghakgjgecehpfodfmaanm', '_blank')}
           >
-            Get VibeLearn
+            Get TypeOS
           </Button>
         </div>
-        <div className="opacity-0 animate-fade-in-up animate-delay-400">
+        
+        <div className="opacity-0 animate-fade-in-up animate-delay-600">
           <div className="text-center space-y-4">
             {/* <p className="text-gray-600 text-lg">
               Shoot us an email at{' '}
