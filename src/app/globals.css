@@ -11,6 +11,40 @@
         url(https://www.thebrowser.company/values/fonts/ABCDiatypeMono-Regular.woff) format("woff"),
         url(https://www.thebrowser.company/values/fonts/ABCDiatypeMono-Regular.otf) format("opentype");
 }
+
+/* Geist font faces for the new homepage */
+@font-face {
+	font-display: swap;
+	font-family: Geist;
+	font-style: normal;
+	font-weight: 100 900;
+	src: url(https://www.plun.ai/_next/static/media/8d697b304b401681-s.woff2) format("woff2");
+	unicode-range: u+0301, u+0400-045f, u+0490-0491, u+04b0-04b1, u+2116;
+}
+@font-face {
+	font-display: swap;
+	font-family: Geist;
+	font-style: normal;
+	font-weight: 100 900;
+	src: url(https://www.plun.ai/_next/static/media/ba015fad6dcf6784-s.woff2) format("woff2");
+	unicode-range: u+0100-02ba, u+02bd-02c5, u+02c7-02cc, u+02ce-02d7, u+02dd-02ff, u+0304, u+0308, u+0329, u+1d00-1dbf, u+1e00-1e9f, u+1ef2-1eff, u+2020, u+20a0-20ab, u+20ad-20c0, u+2113, u+2c60-2c7f, u+a720-a7ff;
+}
+@font-face {
+	font-display: swap;
+	font-family: Geist;
+	font-style: normal;
+	font-weight: 100 900;
+	src: url(https://www.plun.ai/_next/static/media/569ce4b8f30dc480-s.p.woff2) format("woff2");
+	unicode-range: u+00??, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+0304, u+0308, u+0329, u+2000-206f, u+20ac, u+2122, u+2191, u+2193, u+2212, u+2215, u+feff, u+fffd;
+}
+@font-face {
+	ascent-override: 95.94%;
+	descent-override: 28.16%;
+	font-family: Geist Fallback;
+	line-gap-override: 0%;
+	size-adjust: 104.76%;
+	src: local("Arial");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,6 +63,59 @@
   html {
     font-family: system-ui, -apple-system, sans-serif;
   }
+  :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.5rem;
+    }
+  .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 9%;
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+        --ring: 0 0% 83.1%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
 }
 
 @layer components {
@@ -115,7 +202,8 @@
   }
 
   .inherited-css {
-    font-family: Ivartext, Georgia, Times New Roman, serif;
+    color: #171717;
+    font-family: Geist, Geist Fallback, system-ui, -apple-system, sans-serif;
     line-height: 24px;
     tab-size: 4;
   }
@@ -289,4 +377,88 @@
       translate: 0 -50%;
     }
   }
+
+  /* Animation keyframes and classes for new homepage */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animate-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  /* Dris UI Button 3D Effects */
+  .group:hover .shadow-xs {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+
+  .group:active .shadow-xs {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+
+  /* Enhanced 3D Button Effects */
+  .group {
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* Authentic Dris UI button styling */
+  .group.cursor-pointer {
+    box-shadow: 
+      0 4px 8px -2px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .group.cursor-pointer:hover {
+    box-shadow: 
+      0 6px 12px -2px rgba(0, 0, 0, 0.15),
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .group.cursor-pointer:active {
+    box-shadow: 
+      0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  /* Inner gradient enhancements */
+  .shadow-inner {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
 }

@@ -1,168 +1,52 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { Button } from "@/components/dris/button";
 
 export default function Home() {
-  const [showOnlineCount, setShowOnlineCount] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('dark');
-  };
-
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Main Content Container */}
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-16 md:py-0">
-
-        {/* Header with Logo */}
-        <header className="mb-12 md:mb-16">
-          <div className="w-24 h-24 md:w-32 md:h-32 mx-auto">
-            <Image
-              src="/typeos.png"
-              alt="TypeOS"
-              width={128}
-              height={128}
-              className="w-full h-full object-contain md:hidden logo-image"
-            />
-            <Image
-              src="/typeos.png"
-              alt="TypeOS"
-              width={128}
-              height={128}
-              className="w-full h-full object-contain hidden md:block logo-image"
-            />
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-8 py-16 inherited-css">
+      <main className="flex flex-col items-center text-center max-w-2xl mx-auto space-y-8">
+        <div className="flex flex-col items-center space-y-4">
+          <div className="inline-flex items-center gap-1 px-4 py-1 rounded-full opacity-0 animate-fade-in-up">
+            <span className="text-gray-500 text-sm font-semibold">Backed by</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" fill="none" className="w-4 h-4">
+              <g clipPath="url(#clip0_2_4)">
+                <path d="M9.35 0H1.65C0.73873 0 0 0.73873 0 1.65V9.35C0 10.2613 0.73873 11 1.65 11H9.35C10.2613 11 11 10.2613 11 9.35V1.65C11 0.73873 10.2613 0 9.35 0Z" fill="#FF6600" />
+                <path d="M2.70703 2.42773H3.75977L5.5 5.95117L7.24023 2.40625H8.29297L5.88672 6.74609V9.625H4.98438V6.74609L2.70703 2.42773Z" fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_2_4">
+                  <rect width="15" height="15" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <span className="text-gray-500 text-sm font-semibold">Combinator</span>
           </div>
-        </header>
-
-        {/* Main Heading */}
-        <section className="max-w-4xl mx-auto mb-12 md:mb-16">
-          <h1 className="heading text-center italic">
-            We're building better ways to learn with<br />
-            <a
-              href="https://vibelearn.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="heading-link"
-            >
-              VibeLearn
-            </a>
-            {' '}and{' '}
-            <a
-              href="https://vibegrade.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="heading-link"
-            >
-              VibeGrade
-            </a>
-            .
-          </h1>
-        </section>
-
-        {/* CTA Buttons */}
-        <section className="mb-12 md:mb-16">
-          <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center">
-            <a
-              href="https://VibeLearn.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-link"
-            >
-              <Image
-                src="/white-vibe-smile.png"
-                alt=""
-                width={14}
-                height={14}
-                className="w-3.5 h-3.5 invert vibe-smile-image"
-              />
-              VibeLearn
-            </a>
-            <a
-              href="https://VibeGrade.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button-link inherited-css"
-            >
-              <Image
-                src="/white-vibe-smile.png"
-                alt=""
-                width={14}
-                height={14}
-                className="w-3.5 h-3.5 invert vibe-smile-image"
-              />
-              VibeGrade
-            </a>
-          </div>
-        </section>
-
-
-        {/* Footer Navigation */}
-        <footer className="max-w-4xl mx-auto">
-          <nav className="flex flex-col md:flex-row gap-5 md:gap-10 items-center justify-center">
-            <a href="/values" className="mono-link">Company Values</a>
-            <a href="/careers" className="mono-link">Jobs</a>
-            <a
-              href="https://vibelearn.com/waitlist"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mono-link"
-            >
-              Waitlist
-            </a>
-            <a
-              href="https://x.com/typeoscompany"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mono-link"
-            >
-              @typeoscompany
-            </a>
-          </nav>
-        </footer>
-      </div>
-
-      {/* Status Elements - Top Left on Desktop */}
-      <div className="fixed top-5 left-5 z-10 hidden md:flex flex-col gap-3">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-3">
-            <div className="online-dot" />
-            <span className="mono text-sm">69 Online</span>
-          </div>
-          {/* <button
-            onClick={() => setShowOnlineCount(!showOnlineCount)}
-            className="mono-link text-sm opacity-50 hover:opacity-100"
-          >
-            {showOnlineCount ? 'Hide' : 'Show'}
-          </button> */}
-        </div>
-        <div className="text-sm flex items-center gap-3">
-          <div className="theme-dot" />
-          <button className="mono-link" onClick={toggleTheme}>Theme</button>
-        </div>
-      </div>
-
-      {/* Mobile Status Elements */}
-      <div className="md:hidden px-4 py-4">
-        <div className="flex flex-col items-center gap-4">
-          <div className="flex items-center gap-3">
-            <div className="online-dot" />
-            <span className="mono text-sm">69 Online</span>
-            <button
-              onClick={() => setShowOnlineCount(!showOnlineCount)}
-              className="mono-link text-sm opacity-50 hover:opacity-100"
-            >
-              {showOnlineCount ? 'Hide' : 'Show'}
-            </button>
-          </div>
-          <div className="text-sm flex items-center gap-3">
-            <div className="theme-dot" />
-            <button className="mono-link" onClick={toggleTheme}>Theme</button>
+          <div className="flex items-center space-x-4 opacity-0 animate-fade-in-up">
+            <h1 className="text-7xl text-black font-bold">TypeOS</h1>
           </div>
         </div>
-      </div>
+
+        <div className="opacity-0 animate-fade-in-up animate-delay-200">
+          <Button variant="silver">
+            Get TypeOS
+          </Button>
+        </div>
+        <div className="opacity-0 animate-fade-in-up animate-delay-400">
+          <div className="text-center space-y-4">
+            {/* <p className="text-gray-600 text-lg">
+              Shoot us an email at{' '}
+              <a 
+                href="mailto:team@typeos.com" 
+                className="text-black font-medium hover:underline transition-all duration-200"
+              >
+                team@typeos.com
+              </a>
+            </p> */}
+            {/* <p className="text-gray-500 text-sm">We'll respond within 10 hours</p> */}
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
