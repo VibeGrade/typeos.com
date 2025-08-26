@@ -28,7 +28,7 @@ export default function Home() {
         </div>
 
         <p className="text-gray-600 text-lg max-w-xl text-center opacity-0 animate-fade-in-up animate-delay-200">
-          The Future of Writing is Here. Work with AI directly in your Google Docs.
+          Work with AI directly in Google Docs and your Browser.
         </p>
 
         <div className="opacity-0 animate-fade-in-up animate-delay-400">
