@@ -19,7 +19,7 @@ export function YC() {
             <clipPath id="clip0_24_57"><rect fill="white" height="24" rx="5.4" width="24" /></clipPath>
           </defs>
         </svg>
-        <span className="text-sm font-medium bg-gradient-to-br from-slate-900 to-slate-600 bg-clip-text text-transparent">Combinator</span>
+        <span className="text-sm text-slate-600">Combinator</span>
       </span>
     </div>
   );
