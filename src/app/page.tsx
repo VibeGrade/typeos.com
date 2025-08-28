@@ -1,13 +1,14 @@
 'use client';
 
 import { Button } from "@/components/dris/button";
+import { YC } from "@/components/yc";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-8 py-16 inherited-css">
       <main className="flex flex-col items-center text-center max-w-2xl mx-auto space-y-8">
         <div className="flex flex-col items-center space-y-4">
-          <div className="inline-flex items-center gap-1 px-4 py-1 rounded-full opacity-0 animate-fade-in-up">
+          {/* <div className="inline-flex items-center gap-1 px-4 py-1 rounded-full opacity-0 animate-fade-in-up">
             <span className="text-gray-500 text-sm font-semibold">Backed by</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" fill="none" className="w-4 h-4">
               <g clipPath="url(#clip0_2_4)">
@@ -21,6 +22,9 @@ export default function Home() {
               </defs>
             </svg>
             <span className="text-gray-500 text-sm font-semibold">Combinator</span>
+          </div> */}
+          <div className="opacity-0 animate-fade-in-up">
+            <YC />
           </div>
           <div className="flex items-center space-x-4 opacity-0 animate-fade-in-up">
             <h1 className="text-7xl text-black font-bold">TypeOS</h1>
