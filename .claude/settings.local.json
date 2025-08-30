@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(pnpm add:*)",
+      "Read(/var/folders/k3/0c64cghs7pj15brm5fxdyx480000gn/T/TemporaryItems/NSIRD_screencaptureui_3inzIp/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

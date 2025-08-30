@@ -1,0 +1,1 @@
+export const VIDEOS_BASE_URL = '/videos'
