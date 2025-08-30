@@ -3,6 +3,7 @@
 import { Button } from "@/components/dris/button";
 import { YC } from "@/components/yc";
 import FeaturesSection from "@/components/features/FeaturesSection";
+import TrustedBySection from "@/components/TrustedBySection";
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
         </main>
       </div>
       
+      <TrustedBySection />
       <FeaturesSection showTitles={false} />
     </>
   );
