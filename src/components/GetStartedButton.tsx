@@ -5,13 +5,13 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
-import { cn } from "@/src/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/dris/button";
 import { CheckCircleIcon, Chrome, Mail } from "lucide-react";
-import { motion, AnimatePresence } from "motion";
-import { useDevice } from "src/lib/hooks/useDevice";
+import { motion, AnimatePresence } from "framer-motion";
+import { useDevice } from "@/hooks/useDevice";
 import Image from "next/image";
-import { useGT, T, Branch } from 'gt-next';
+// import { useGT, T, Branch } from 'gt-next';
 
 interface GetStartedButtonProps {
     children?: React.ReactNode;
@@ -20,20 +20,20 @@ interface GetStartedButtonProps {
 }
 
 const GetStartedButton = ({ children, href, target }: GetStartedButtonProps) => {
-    const { user, userData } = useAuthenticationContext()
+    // const { user, userData } = useAuthenticationContext()
     const router = useRouter()
-    const [showLoggedIn, setShowLoggedIn] = useState(false)
+    const [showLoggedIn, setShowLoggedIn] = useState(false) // Always false by default
     const { isMobile } = useDevice();
-    const t = useGT();
+    // const t = useGT();
     
     useEffect(() => {
         // Add a small delay to allow for a smooth transition if already logged in
         const timer = setTimeout(() => {
-            setShowLoggedIn(!!user)
+            setShowLoggedIn(false) // Always false - no auth context
         }, 500)
         
         return () => clearTimeout(timer)
-    }, [user])
+    }, [])
     
     return (
         <div className="flex flex-col items-center w-fit">
@@ -54,31 +54,27 @@ const GetStartedButton = ({ children, href, target }: GetStartedButtonProps) => 
                         >
                             <Button
                                 size={"lg"}
-                                variant="neumorphic-primary"
+                                variant="silver"
                                 className="h-full w-fit text-base px-6 "
                             >
                                 <div className='flex justify-center items-center gap-2'>
                                     {children ?? (
-                                        <T>
-                                            <Branch
-                                                branch={isMobile.toString()}
-                                                true={
-                                                    <>
-                                                        Start for Free
-                                                        <ArrowLongRightIcon className="!w-5 !h-5 " strokeWidth={2} />
-                                                    </>
-                                                }
-                                                false={
-                                                    <>
-                                                        Add to Chrome for Free
-                                                        <Chrome
-                                                            className=" h-8 w-8 group-hover:translate-x-0.5 transition-all"
-                                                            strokeWidth={3}
-                                                        />
-                                                    </>
-                                                }
-                                            />
-                                        </T>
+                                        <>
+                                            {isMobile ? (
+                                                <>
+                                                    Start for Free
+                                                    <ArrowLongRightIcon className="!w-5 !h-5 " strokeWidth={2} />
+                                                </>
+                                            ) : (
+                                                <>
+                                                    Add to Chrome for Free
+                                                    <Chrome
+                                                        className=" h-8 w-8 group-hover:translate-x-0.5 transition-all"
+                                                        strokeWidth={3}
+                                                    />
+                                                </>
+                                            )}
+                                        </>
                                     )}
                                 </div>
                             </Button>
@@ -90,15 +86,15 @@ const GetStartedButton = ({ children, href, target }: GetStartedButtonProps) => 
                         >
                             <Button
                                 size={"lg"}
-                                variant="neumorphic-secondary"
+                                variant="silver"
                                 className="h-full w-fit text-base px-6 text-sky-800"
                             >
                                 <div className='relative z-30 flex justify-center items-center gap-2'>
                                     {children ?? (
-                                        <T>
+                                        <>
                                             Grade Now
                                             <ArrowLongRightIcon className="!w-5 !h-5 text-sky-800" strokeWidth={2} />
-                                        </T>
+                                        </>
                                     )}
                                 </div>
                             </Button>
@@ -116,7 +112,7 @@ const GetStartedButton = ({ children, href, target }: GetStartedButtonProps) => 
                 className="font-bold text-sky-800 mt-2 flex sm:hidden flex-row items-center whitespace-nowrap text-xs gap-1"
             >
                 <CheckCircleIcon className="size-3 flex-shrink-0" />
-                <T>No credit card required</T>
+                No credit card required
             </motion.span>
             
             {/* Desktop text - only shown on larger screens */}
@@ -133,7 +129,7 @@ const GetStartedButton = ({ children, href, target }: GetStartedButtonProps) => 
                     )}
                 >
                     <CheckCircleIcon className={showLoggedIn ? "size-3 flex-shrink-0" : "size-4 flex-shrink-0"} /> 
-                    <T>No credit card required</T>
+                    No credit card required
                 </motion.span>
             </AnimatePresence>
            
